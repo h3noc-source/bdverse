@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BDVerse — Histoires qui vivent</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">BD<span>VERSE</span></div>
+  <nav><a href="#explorer">Explorer</a><a href="#afrique">Histoires africaines</a><a href="#createur">Créer</a></nav>
+  <button class="outline account-state" onclick="openLogin()">Se connecter</button>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <p class="eyebrow">NOUVELLE SÉRIE ORIGINALE</p>
+    <h1>LE GUERRIER<br><span>KONGO</span></h1>
+    <p class="lead">Un peuple. Une terre. Un héritage.</p>
+    <p class="desc">Une aventure afro-fantastique inspirée de l'Afrique centrale. Mavungu découvre un héritage lié au symbole du léopard et doit protéger son royaume d'une menace mystérieuse.</p>
+    <button class="primary" onclick="location.href='story.html'">Lire l'histoire</button>
+    <button class="ghost" onclick="location.href='reader.html'">▶ Épisode 1 gratuit</button>
+  </div>
+  <div class="hero-art"><div class="leopard">🐆</div><div class="warrior">⚔</div><div class="sun"></div></div>
+</section>
+
+<section id="afrique" class="section">
+  <div class="section-title"><div><p class="eyebrow">À DÉCOUVRIR</p><h2>Histoires africaines</h2></div><a href="#explorer">Voir tout →</a></div>
+  <div class="cards">
+    <article class="card featured"><div class="cover kongo">🐆</div><div class="pad"><h3>Le Guerrier Kongo</h3><p>Action • Aventure • Fantastique</p><button onclick="location.href='story.html'">Découvrir</button></div></article>
+    <article class="card"><div class="cover river">🌊</div><div class="pad"><h3>Le Royaume du Fleuve</h3><p>Légende • Aventure</p><button>À venir</button></div></article>
+    <article class="card"><div class="cover moon">🌙</div><div class="pad"><h3>Les Gardiens de la Lune</h3><p>Mythologie • Fantastique</p><button>À venir</button></div></article>
+    <article class="card"><div class="cover storm">⚡</div><div class="pad"><h3>La Fille de l'Orage</h3><p>Fantastique • Action</p><button>À venir</button></div></article>
+  </div>
+</section>
+
+<section id="explorer" class="section dark">
+  <p class="eyebrow">EXPLORE</p><h2>Choisis ton univers</h2>
+  <div class="chips"><span>Histoires africaines</span><span>Action</span><span>Mystère</span><span>Science-fiction</span><span>Mythologie</span><span>Super-héros</span><span>Histoire & légendes</span></div>
+</section>
+
+<section id="createur" class="creator">
+  <div><p class="eyebrow">POUR LES AUTEURS</p><h2>Publie. Construis ton public. Gagne.</h2><p>BDVerse permettra aux créateurs de publier leurs séries, proposer des épisodes premium, recevoir des soutiens et suivre leurs revenus depuis un tableau de bord.</p></div>
+  <button class="primary" onclick="location.href='creator.html'">Ouvrir l'espace créateur</button>
+</section>
+</main>
+
+<footer><strong>BDVERSE</strong><span>Lire • Créer • Publier • Gagner</span></footer>
+<div id="login" class="modal"><div class="modalbox"><button class="close" onclick="closeLogin()">×</button><h2>Bienvenue sur BDVerse</h2>
+<input id="email" type="email" placeholder="E-mail"><input placeholder="Mot de passe" type="password">
+<button class="primary" onclick="registerDemo()">Créer / ouvrir le compte démo</button>
+<small>Démo locale : les données sont enregistrées uniquement dans ce navigateur.</small></div></div>
+<script src="app.js"></script>
+</body></html>

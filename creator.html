@@ -1,0 +1,23 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Espace créateur — BDVerse</title><link rel="stylesheet" href="style.css"></head>
+<body><header><div class="logo">BD<span>VERSE</span></div><a href="index.html">← Accueil</a><button class="outline account-state" onclick="openLogin()">Compte créateur</button></header>
+<main class="dashboard"><div><p class="eyebrow">ESPACE CRÉATEUR</p><h1>Ton studio BD</h1><p>Prototype du futur tableau de bord.</p></div><div class="stats"><div><b>0</b><span>Lecteurs</span></div><div><b>0</b><span>Abonnés</span></div><div><b>0 FC</b><span>Revenus</span></div></div>
+<section class="box" style="margin:25px 0">
+<h2>Créer une série — démo</h2><p>Cette version simule la publication dans ton navigateur.</p>
+<input id="newTitle" placeholder="Titre de la BD" style="padding:13px;background:#0b0c10;border:1px solid #333;border-radius:8px;color:#fff;width:100%;margin:10px 0">
+<button class="primary" onclick="publishDemo()">Publier la BD</button>
+</section><section class="dashgrid"><div class="box"><h2>+ Nouvelle BD</h2><p>Créer une série, ajouter une couverture et définir les catégories.</p><button class="primary">Créer</button></div><div class="box"><h2>+ Nouvel épisode</h2><p>Importer les pages, choisir gratuit ou premium et publier.</p><button class="ghost">Ajouter</button></div><div class="box"><h2>💰 Monétisation</h2><p>Premium, soutiens et abonnements seront intégrés dans une prochaine version.</p><button class="ghost">Configurer</button></div></section>
+<section class="box" style="margin-top:25px">
+<h2>Connexion au serveur</h2>
+<p id="apiStatus">Vérification de l'API…</p>
+<button class="ghost" onclick="checkApi()">Tester l'API</button>
+</section></main><script src="app.js"></script>
+<script>
+async function checkApi(){
+  const el=document.getElementById("apiStatus");
+  try{
+    const r=await fetch("/api/health"); const d=await r.json();
+    el.textContent=d.ok ? "✓ API BDVerse connectée — version "+d.version : "API indisponible";
+  }catch(e){el.textContent="Mode fichier statique : démarre server.js pour activer l'API."}
+}
+checkApi();
+</script></body></html>
